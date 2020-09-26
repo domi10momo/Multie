@@ -6,31 +6,36 @@
 <div id='map'></div>
 <script>
 let map
-function initMap(){
+let geocoder
+
+function initMap() {
   geocoder = new google.maps.Geocoder()
 
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 37.9098138, lng:139.0606061},
+    center: { lat: 37.9053235, lng: 139.0296194 },
     zoom: 12.5,
   });
 }
 
-let geocoder
+function codeAddress() {
+  //let inputAddress = document.getElementById('address').value;  //正常
+  console.log(gon.spots)
 
-function codeAddress(){
-  let inputAddress = document.getElementById('address').value;
 
-  geocoder.geocode( { 'address': inputAddress}, function(results, status) {
-    if (status == 'OK') {
-      map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        position: results[0].geometry.location,
-        map: map
-      });
-    } else {
-      alert('該当する結果がありませんでした：' + status);
-    }
-  });   
+
+    geocoder.geocode({ 'address': "" }, function (results, status) {
+      if (status == 'OK') {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          title: gon.test,
+          map: map
+        });
+      } else {
+        alert('該当する結果がありませんでした：' + gon.test);
+      }
+    });
+
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
