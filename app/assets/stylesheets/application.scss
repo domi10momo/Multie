@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap/scss/bootstrap";
+ 
+ #map {
+  height: 600px;
+  width: 1000px;
+}

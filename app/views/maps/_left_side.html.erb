@@ -1,0 +1,10 @@
+    <div class="col-md-3">
+      <% @spots.each do |spot| %>
+        <p>市町村名：<%= spot.city.name %></p>
+        <p>観光地名：<%= spot.name %></p>
+        <button class="icon-btn">
+          行きたい！
+        </button>
+        <hr>
+      <% end %>
+    </div> 
