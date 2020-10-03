@@ -22,5 +22,6 @@
 }
 
 .col-md-3 {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }

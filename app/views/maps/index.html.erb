@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
-    <%= render 'maps/left_side' %>
+    <div　class="col-md-3">
+      <%= javascript_pack_tag 'maps/button', 'data-turbolinks-track': 'reload' %>
+    </div>
     <div class="col-md-9">
-     <div id='map'></div>
+      <div id='map'></div>
       <script>
         let map
         let geocoder
@@ -17,8 +19,9 @@
         // }
       </script>
     </div>
-  </div>   
+  </div>
+<!---   
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
-
+-->
 </div>
 
