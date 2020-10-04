@@ -1,8 +1,5 @@
 <%= javascript_pack_tag 'maps/button', 'data-turbolinks-track': 'reload' %>
-
-
-    <div class="col-md-9">
-      <div id='map'>ここにマップが表示されます。</div>
-    </div>
+<%= javascript_pack_tag 'maps/initMap', 'data-turbolinks-track': 'reload' %>
+<script src="https://maps.googleapis.com/maps/api/js?key=ENV['API_KEY']&callback=initMap" async defer></script>
 
 
