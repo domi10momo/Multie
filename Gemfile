@@ -57,3 +57,6 @@ gem 'dotenv-rails'
 gem 'gon'
 gem 'pry-rails'
 gem 'devise'
+
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
