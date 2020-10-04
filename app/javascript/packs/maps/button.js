@@ -1,5 +1,4 @@
 gon.spots.forEach(spot => {
-  console.log(spot)
   var spotButton = document.createElement('input');
   spotButton.type = 'button';
   spotButton.className = 'col-md-3';
