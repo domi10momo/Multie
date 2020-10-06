@@ -1,5 +1,19 @@
 <%= javascript_pack_tag 'maps/button', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'maps/initMap', 'data-turbolinks-track': 'reload' %>
-<script src="https://maps.googleapis.com/maps/api/js?key=ENV['API_KEY']&callback=initMap" async defer></script>
+
+  <div id="map" style="width:620px; height:400px"></div>
+
+  <script type="text/javascript">
+    function initMap() {
+      var opts = {
+        zoom: 12.5,
+        center: new google.maps.LatLng(37.9120388, 139.061775)
+      };
+      var map = new google.maps.Map(document.getElementById("map"), opts);
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap">
+  </script>
 
 
