@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :users
   root to: 'maps#index'
   get 'maps/index'
+  get 'spots/index'
   resources :maps, only: [:index]
 end
