@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :spots, dependent: :destroy
   has_many :wants, dependent: :destroy
+
+  has_many :wanted_spots, through: :wants, source: :spot
 end
