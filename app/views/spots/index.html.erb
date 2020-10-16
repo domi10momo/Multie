@@ -3,11 +3,7 @@
   <p>市町村名：<%= spot.city.name %></p>
   <p>観光地名：<%= spot.name %></p>
   <p>
-    <% if @wanted_spot_ids.include?(spot.id) %>
-      「行きたい」を取り消す
-    <% else %>
-      「行きたい」リストに追加する
-    <% end %>
+    <%= render 'want', spot: spot %>
   </p>
   <hr>
 <% end %>

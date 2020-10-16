@@ -6,7 +6,7 @@ class CreateWants < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_index :wants, [:user_id, :spot_id] unique: true
+    add_index :wants, [:user_id, :spot_id], unique: true
     #Ex:- add_index("admin_users", "username")
     #Ex:- add_index("admin_users", "username")    
   end
