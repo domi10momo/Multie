@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :spots do
     resource :wants, only: [:create, :destroy]
   end
-  root to: 'maps#index'
+  root to: 'users#index'
   get 'maps/index'
   get 'spots/index'
   

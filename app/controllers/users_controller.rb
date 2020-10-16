@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def index
-    # @want_spots = Spot.find(params[:spot_id]).user_id == current.id
-    @want_spots = Want.where(user_id: current_user.id)
-    binding.pry
+    wanted_spot_ids = current_user.wants.pluck(:spot_id)
+    @want_spots = Spot.find(wanted_spot_ids)
   end
 end
