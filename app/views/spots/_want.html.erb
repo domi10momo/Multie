@@ -1,0 +1,5 @@
+<% if @wanted_spot_ids.include?(spot.id) %>
+  <%= link_to "「行きたい」を取り消す", spot_wants_path(spot), method: :delete %>
+<% else %>
+  <%= link_to "「行きたい」リストに追加する", spot_wants_path(spot), method: :post %>
+<% end %>
