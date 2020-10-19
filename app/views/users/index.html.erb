@@ -1,5 +1,5 @@
 <h1>OK</h1>
-<%= @want_spots.each do |spot| %>
+<% @want_spots.each do |spot| %>
   <p><%= spot.name %></p>
 <% end %>
 <%= link_to "Google Map検索", "https://www.google.com/maps/dir/?api=1&origin=長崎駅&destination=グラバー園", target: :_blank %>
