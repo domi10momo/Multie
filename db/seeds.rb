@@ -1,8 +1,8 @@
 require 'csv'
 
 def reset_id(table_name)
-  connection = ActiveRecord::Base.connection;
-  connection.execute("select setval('#{table_name}_id_seq',(select max(id) from #{table_name}))");
+  connection = ActiveRecord::Base.connection
+  connection.execute("select setval('#{table_name}_id_seq',(select max(id) from #{table_name}))")
 end
 
 puts 'Delete Data'
